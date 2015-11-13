@@ -61,11 +61,20 @@ $margin-center: 0 auto;
   font: $weight #{$size}/#{$line-height} $font-family;
   color: $color
 }
-@mixin transition($style-transition, $time-transition, $function-transition, $pause-time-transition){
+@mixin transition($style-transition, $time-transition, $function-transition:ease-out, $pause-time-transition:0s){
   transition: $style-transition $time-transition $function-transition $pause-time-transition;
   -webkit-transition: $style-transition $time-transition $function-transition $pause-time-transition;
   -moz-transition: $style-transition $time-transition $function-transition $pause-time-transition;
   -o-transition: $style-transition $time-transition $function-transition $pause-time-transition;
+}
+@mixin block($width, $height, $padding, $margin){
+  width: $width;
+  height: $height;
+  padding: $padding;
+  margin: $margin;
+}
+@mixin border($border-weight, $border-style, $border-color:$grey-color-1){
+  border: $border-weight $border-style $border-color;
 }
 @media (max-width:1329px) {
   $container: 1024px;
@@ -77,5 +86,10 @@ h1{
   @include font-style(normal, '24px', '28px', 'PT Sans', $black-color-1)
 }
 .dev{
-  @include transition(background-color, 0.3s, ease-out, 0.1ms)
+  @include transition(background-color, 0.3s);
+  @include block(330px, 400px, 5px, 5px);
+  @include border(2px, solid)
+}
+.dev:hover{
+  background-color: #333333;
 }

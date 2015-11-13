@@ -47,7 +47,15 @@ h1 {
   color: #333333; }
 
 .dev {
-  transition: background-color 0.3s ease-out 0.1ms;
-  -webkit-transition: background-color 0.3s ease-out 0.1ms;
-  -moz-transition: background-color 0.3s ease-out 0.1ms;
-  -o-transition: background-color 0.3s ease-out 0.1ms; }
+  transition: background-color 0.3s ease-out 0s;
+  -webkit-transition: background-color 0.3s ease-out 0s;
+  -moz-transition: background-color 0.3s ease-out 0s;
+  -o-transition: background-color 0.3s ease-out 0s;
+  width: 330px;
+  height: 400px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #afafb0; }
+
+.dev:hover {
+  background-color: #333333; }
