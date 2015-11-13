@@ -1,0 +1,81 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End of Eric Meyer's CSS Reset */
+$red-color-1: #93334b;
+$red-color-2: #a55569;
+$black-color-1: #333333;
+$black-color-2: #2f353b;
+$grey-color-1: #afafb0;
+$grey-color-2: #f2f2f2;
+$grey-color-3: #c6a0a9;
+$grey-color-4: #fafafa;
+$grey-color-5: #d3d4d5;
+$grey-color-6: #b1b1b1;
+$grey-color-7: #ededed;
+
+$container: 1320px;
+$margin-center: 0 auto;
+
+@mixin font-style($weight, $size, $line-height, $font-family, $color) {
+  font: $weight #{$size}/#{$line-height} $font-family;
+  color: $color
+}
+@mixin transition($style-transition, $time-transition, $function-transition, $pause-time-transition){
+  transition: $style-transition $time-transition $function-transition $pause-time-transition;
+  -webkit-transition: $style-transition $time-transition $function-transition $pause-time-transition;
+  -moz-transition: $style-transition $time-transition $function-transition $pause-time-transition;
+  -o-transition: $style-transition $time-transition $function-transition $pause-time-transition;
+}
+@media (max-width:1329px) {
+  $container: 1024px;
+}
+@media (max-width:1023px) {
+  $container: 100%;
+}
+h1{
+  @include font-style(normal, '24px', '28px', 'PT Sans', $black-color-1)
+}
+.dev{
+  @include transition(background-color, 0.3s, ease-out, 0.1ms)
+}
