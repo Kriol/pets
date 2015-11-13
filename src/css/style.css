@@ -59,3 +59,14 @@ h1 {
 
 .dev:hover {
   background-color: #333333; }
+
+.container {
+  width: 1320px;
+  margin: 0 auto; }
+
+@media screen and (max-width: 1329px) {
+  .container {
+    width: 1024px; } }
+@media screen and (max-width: 1023px) {
+  .container {
+    width: 100%; } }

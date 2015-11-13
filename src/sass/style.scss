@@ -76,12 +76,6 @@ $margin-center: 0 auto;
 @mixin border($border-weight, $border-style, $border-color:$grey-color-1){
   border: $border-weight $border-style $border-color;
 }
-@media (max-width:1329px) {
-  $container: 1024px;
-}
-@media (max-width:1023px) {
-  $container: 100%;
-}
 h1{
   @include font-style(normal, '24px', '28px', 'PT Sans', $black-color-1)
 }
@@ -92,4 +86,20 @@ h1{
 }
 .dev:hover{
   background-color: #333333;
+}
+.container{
+  width: $container;
+  margin: $margin-center;
+}
+@media screen and (max-width:1329px) {
+  $container: 1024px;
+  .container{
+    width: $container;
+  }
+}
+@media screen and (max-width:1023px) {
+  $container: 100%;
+  .container{
+    width: $container;
+  }
 }
